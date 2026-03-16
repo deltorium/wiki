@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ЦИТАТЫ ОБЛАДАТЕЛЕЙ НОБЕЛЕВСКОЙ ПРЕМИИ — Википедия</title>
     <style>
+        /* БАЗОВЫЕ СТИЛИ (ДЛЯ ПК) */
         body { margin: 0; padding: 0; font-family: sans-serif; background: #eaecf0; color: #202122; }
         #mw-panel { position: absolute; top: 0; width: 10em; left: 0; padding: 1em 0 0 1em; font-size: 0.875em; }
         .p-logo img { max-width: 135px; height: auto; margin-bottom: 1em; }
@@ -19,15 +20,45 @@
         a { color: #0645ad; text-decoration: none; }
         a:hover { text-decoration: underline; }
         
-        /* Стили классической Вики-таблицы */
         .wikitable { border-collapse: collapse; margin: 1em 0; background-color: #f8f9fa; border: 1px solid #a2a9b1; color: #202122; width: 100%; font-size: 95%; }
         .wikitable th, .wikitable td { border: 1px solid #a2a9b1; padding: 0.4em 0.6em; }
         .wikitable th { background-color: #eaecf0; text-align: center; font-weight: bold; }
         .wikitable tr:nth-child(even) { background-color: #fdfdfd; }
+
+        /* СКРЫВАЕМ МОБИЛЬНУЮ ШАПКУ НА ПК */
+        @media screen and (min-width: 769px) {
+            .mobile-header { display: none; }
+        }
+
+        /* АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ ТЕЛЕФОНОВ */
+        @media screen and (max-width: 768px) {
+            #mw-panel { display: none; } /* Скрываем левое меню */
+            #content { margin-left: 0; padding: 1em; border-top: 1px solid #a2a9b1; }
+            
+            h1 { font-size: 1.4em; }
+
+            /* Показываем мобильный логотип сверху */
+            .mobile-header { display: block; margin-bottom: 1em; border-bottom: 1px solid #a2a9b1; padding-bottom: 0.5em; }
+            .mobile-header img { height: 35px; }
+
+            /* Превращаем таблицу в карточки */
+            .wikitable thead { display: none; } /* Прячем заголовки колонок */
+            .wikitable, .wikitable tbody, .wikitable tr, .wikitable td { display: block; width: 100%; box-sizing: border-box; }
+            .wikitable tr { margin-bottom: 1.2em; border: 1px solid #a2a9b1; background-color: #fff !important; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 4px; overflow: hidden; }
+            .wikitable td { padding: 0.8em; border: none; text-align: left !important; }
+            
+            /* Стилизация элементов внутри карточки */
+            .wikitable td:nth-child(1) { display: inline-block; width: auto; background: #eaecf0; font-weight: bold; border-radius: 3px; padding: 0.2em 0.6em; margin-bottom: 0.5em; font-size: 0.9em; }
+            .wikitable td:nth-child(2) { float: right; padding: 0 0 0 1em; margin-top: -2em; }
+            .wikitable td:nth-child(2) img { max-height: 90px !important; border-radius: 4px; }
+            .wikitable td:nth-child(3) { padding-top: 0; font-size: 1.1em; padding-right: 70px; }
+            .wikitable td:nth-child(4) { clear: both; background: #f8f9fa; border-top: 1px solid #eaecf0; font-style: italic; margin-top: 0.5em; }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Меню для ПК -->
     <div id="mw-panel">
         <div class="p-logo">
             <a href="https://ru.wikipedia.org/" title="Перейти на заглавную страницу">
@@ -40,6 +71,13 @@
     </div>
 
     <div id="content">
+        <!-- Шапка для мобильных (видна только на телефонах) -->
+        <div class="mobile-header">
+            <a href="https://ru.wikipedia.org/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Wikipedia-logo-v2-ru.svg/135px-Wikipedia-logo-v2-ru.svg.png" alt="Википедия">
+            </a>
+        </div>
+
         <h1 id="firstHeading">ЦИТАТЫ ОБЛАДАТЕЛЕЙ НОБЕЛЕВСКОЙ ПРЕМИИ</h1>
         
         <p>В данном списке представлены известные и вдохновляющие цитаты выдающихся учёных, писателей и общественных деятелей, удостоенных <b><a href="https://ru.wikipedia.org/wiki/Нобелевская_премия">Нобелевской премии</a></b> в различных категориях за выдающиеся достижения в науке, литературе и вклад в развитие общества.</p>
@@ -54,164 +92,411 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td style="text-align: center;">1</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Einstein_Head.jpg?width=80" alt="Альберт Эйнштейн" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Эйнштейн,_Альберт">Альберт Эйнштейн</a></b><br><span style="font-size: 85%; color: #54595d;">Физика, 1921</span></td>
-                    <td>«Воображение важнее, чем знания.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">2</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Marie_Curie_c1920.jpg?width=80" alt="Мария Кюри" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Кюри,_Мария">Мария Кюри</a></b><br><span style="font-size: 85%; color: #54595d;">Физика, 1903; Химия, 1911</span></td>
-                    <td>«В жизни нет ничего, чего стоило бы бояться, есть только то, что нужно понять.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">3</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Max_Planck_1933.jpg?width=80" alt="Макс Планк" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Планк,_Макс">Макс Планк</a></b><br><span style="font-size: 85%; color: #54595d;">Физика, 1918</span></td>
-                    <td>«Наука не может разгадать конечную загадку природы.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">4</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Niels_Bohr.jpg?width=80" alt="Нильс Бор" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Бор,_Нильс">Нильс Бор</a></b><br><span style="font-size: 85%; color: #54595d;">Физика, 1922</span></td>
-                    <td>«Противоположность правильного высказывания — ложное высказывание. Но противоположность глубокой истины может быть другой глубокой истиной.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">5</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Richard_Feynman_Nobel.jpg?width=80" alt="Ричард Фейнман" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Фейнман,_Ричард_Филлипс">Ричард Фейнман</a></b><br><span style="font-size: 85%; color: #54595d;">Физика, 1965</span></td>
-                    <td>«Главный принцип — не дурачить самого себя, а себя как раз одурачить легче всего.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">6</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Erwin_Schrödinger_(1933).jpg?width=80" alt="Эрвин Шрёдингер" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Шрёдингер,_Эрвин">Эрвин Шрёдингер</a></b><br><span style="font-size: 85%; color: #54595d;">Физика, 1933</span></td>
-                    <td>«Задача состоит не столько в том, чтобы увидеть то, что никто еще не видел, сколько в том, чтобы подумать о том, о чем никто еще не думал.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">7</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Werner_Heisenberg_1933.jpg?width=80" alt="Вернер Гейзенберг" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Гейзенберг,_Вернер">Вернер Гейзенберг</a></b><br><span style="font-size: 85%; color: #54595d;">Физика, 1932</span></td>
-                    <td>«То, что мы наблюдаем, — это не сама природа, а природа, которая выступает в том виде, в каком она выявляется благодаря нашему способу постановки вопросов.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">8</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paul_Dirac_1933.jpg?width=80" alt="Поль Дирак" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Дирак,_Поль_Адриен_Морис">Поль Дирак</a></b><br><span style="font-size: 85%; color: #54595d;">Физика, 1933</span></td>
-                    <td>«Физическому закону должна быть присуща математическая красота.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">9</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Martin_Luther_King,_Jr..jpg?width=80" alt="Мартин Лютер Кинг" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Кинг,_Мартин_Лютер">Мартин Лютер Кинг</a></b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 1964</span></td>
-                    <td>«Тьма не может прогнать тьму: это может сделать только свет.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">10</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson_Mandela-2008_(edit).jpg?width=80" alt="Нельсон Мандела" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Мандела,_Нельсон">Нельсон Мандела</a></b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 1993</span></td>
-                    <td>«Образование — самое мощное оружие, с помощью которого можно изменить мир.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">11</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mother_Teresa_1.jpg?width=80" alt="Мать Тереза" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Мать_Тереза">Мать Тереза</a></b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 1979</span></td>
-                    <td>«Мы не можем делать великие дела. Мы можем делать только маленькие дела с великой любовью.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">12</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ivan_Pavlov_NLM3.jpg?width=80" alt="Иван Павлов" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Павлов,_Иван_Петрович">Иван Павлов</a></b><br><span style="font-size: 85%; color: #54595d;">Физиология и медицина, 1904</span></td>
-                    <td>«Изучайте азы науки, прежде чем пытаться взойти на ее вершины.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">13</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ilya_Mechnikov.jpg?width=80" alt="Илья Мечников" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Мечников,_Илья_Ильич">Илья Мечников</a></b><br><span style="font-size: 85%; color: #54595d;">Физиология и медицина, 1908</span></td>
-                    <td>«Пессимизм есть болезнь, которую можно и должно лечить.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">14</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Alexander_Fleming.jpg?width=80" alt="Александр Флеминг" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Флеминг,_Александр">Александр Флеминг</a></b><br><span style="font-size: 85%; color: #54595d;">Физиология и медицина, 1945</span></td>
-                    <td>«Природа создает пенициллин, я только нашел его.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">15</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/James_D_Watson_Genome_Project.jpg?width=80" alt="Джеймс Уотсон" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Уотсон,_Джеймс">Джеймс Уотсон</a></b><br><span style="font-size: 85%; color: #54595d;">Физиология и медицина, 1962</span></td>
-                    <td>«Раньше мы думали, что наша судьба написана на звездах. Теперь мы знаем, что она записана в наших генах.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">16</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gabriel_Garcia_Marquez.jpg?width=80" alt="Габриэль Гарсиа Маркес" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Гарсиа_Маркес,_Габриэль">Габриэль Гарсиа Маркес</a></b><br><span style="font-size: 85%; color: #54595d;">Литература, 1982</span></td>
-                    <td>«Жизнь — это не то, что человек прожил, а то, что он помнит.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">17</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ernest_Hemingway_1923_passport_photo.jpg?width=80" alt="Эрнест Хемингуэй" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Хемингуэй,_Эрнест">Эрнест Хемингуэй</a></b><br><span style="font-size: 85%; color: #54595d;">Литература, 1954</span></td>
-                    <td>«Мир — хорошее место, и за него стоит драться.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">18</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/George_Bernard_Shaw_1914_colorized.jpg?width=80" alt="Бернард Шоу" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Шоу,_Джордж_Бернард">Бернард Шоу</a></b><br><span style="font-size: 85%; color: #54595d;">Литература, 1925</span></td>
-                    <td>«Секрет успеха в том, чтобы оскорбить как можно больше людей.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">19</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Winston_Churchill_-_19086236948.jpg?width=80" alt="Уинстон Черчилль" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Черчилль,_Уинстон">Уинстон Черчилль</a></b><br><span style="font-size: 85%; color: #54595d;">Литература, 1953</span></td>
-                    <td>«Успех — это способность шагать от одной неудачи к другой, не теряя энтузиазма.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">20</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Camus,_gagnant_de_prix_Nobel,_portrait_en_buste,_posé_au_bureau,_faisant_face_à_gauche,_directeur_de_Combat.jpg?width=80" alt="Альбер Камю" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Камю,_Альбер">Альбер Камю</a></b><br><span style="font-size: 85%; color: #54595d;">Литература, 1957</span></td>
-                    <td>«Свобода — это не что иное, как шанс стать лучше.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">21</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Paul_Sartre_1967.jpg?width=80" alt="Жан-Поль Сартр" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Сартр,_Жан-Поль">Жан-Поль Сартр</a></b><br><span style="font-size: 85%; color: #54595d;">Литература, 1964</span></td>
-                    <td>«Человек обречен быть свободным.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">22</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Boris_Pasternak_1958.jpg?width=80" alt="Борис Пастернак" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Пастернак,_Борис_Леонидович">Борис Пастернак</a></b><br><span style="font-size: 85%; color: #54595d;">Литература, 1958</span></td>
-                    <td>«Цель творчества — самоотдача, а не шумиха, не успех.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">23</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ivan_Bunin_1933.jpg?width=80" alt="Иван Бунин" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Бунин,_Иван_Алексеевич">Иван Бунин</a></b><br><span style="font-size: 85%; color: #54595d;">Литература, 1933</span></td>
-                    <td>«Больше всего мы думаем о том, чего у нас нет.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">24</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Brodsky_in_Ann_Arbor.jpg?width=80" alt="Иосиф Бродский" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Бродский,_Иосиф_Александрович">Иосиф Бродский</a></b><br><span style="font-size: 85%; color: #54595d;">Литература, 1987</span></td>
-                    <td>«Мир, вероятно, спасти уже не удастся, но отдельного человека всегда можно.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">25</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Aleksandr_Solzhenitsyn_1974_crop.jpg?width=80" alt="Александр Солженицын" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Солженицын,_Александр_Исаевич">Александр Солженицын</a></b><br><span style="font-size: 85%; color: #54595d;">Литература, 1970</span></td>
-                    <td>«Одно слово правды весь мир перетянет.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">26</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Mann_1937.jpg?width=80" alt="Томас Манн" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Манн,_Томас">Томас Манн</a></b><br><span style="font-size: 85%; color: #54595d;">Литература, 1929</span></td>
-                    <td>«Писатель — это человек, которому писать труднее, чем остальным людям.»</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">27</td>
-                    <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lev_Landau_2.jpg?width=80" alt="Лев Ландау" width="60" style="max-height: 80px; object-fit: cover;"></td>
-                    <td><b><a href="https://ru.wikipedia.org/wiki/Ландау,_Лев_Давидович">Лев Ландау</a></b><br><span style="font-size: 85%; color: #54595d;">Физика, 1962</span></td>
-                    <td>«Главно
+        <tr>
+            <td style="text-align: center;">1</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Einstein_Head.jpg?width=80" alt="Альберт Эйнштейн" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Альберт Эйнштейн</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1921</span></td>
+            <td>«Воображение важнее, чем знания.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">2</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Marie_Curie_c1920.jpg?width=80" alt="Мария Кюри" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Мария Кюри</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1903; Химия, 1911</span></td>
+            <td>«В жизни нет ничего, чего стоило бы бояться, есть только то, что нужно понять.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">3</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Max_Planck_1933.jpg?width=80" alt="Макс Планк" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Макс Планк</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1918</span></td>
+            <td>«Наука не может разгадать конечную загадку природы.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">4</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Niels_Bohr.jpg?width=80" alt="Нильс Бор" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Нильс Бор</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1922</span></td>
+            <td>«Противоположность правильного высказывания — ложное высказывание. Но противоположность глубокой истины может быть другой глубокой истиной.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">5</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Richard_Feynman_Nobel.jpg?width=80" alt="Ричард Фейнман" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Ричард Фейнман</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1965</span></td>
+            <td>«Главный принцип — не дурачить самого себя, а себя как раз одурачить легче всего.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">6</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Erwin_Schrödinger_(1933).jpg?width=80" alt="Эрвин Шрёдингер" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Эрвин Шрёдингер</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1933</span></td>
+            <td>«Задача состоит не столько в том, чтобы увидеть то, что никто еще не видел, сколько в том, чтобы подумать о том, о чем никто еще не думал.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">7</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Werner_Heisenberg_1933.jpg?width=80" alt="Вернер Гейзенберг" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Вернер Гейзенберг</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1932</span></td>
+            <td>«То, что мы наблюдаем, — это не сама природа, а природа, которая выступает в том виде, в каком она выявляется благодаря нашему способу постановки вопросов.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">8</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paul_Dirac_1933.jpg?width=80" alt="Поль Дирак" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Поль Дирак</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1933</span></td>
+            <td>«Физическому закону должна быть присуща математическая красота.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">9</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Martin_Luther_King,_Jr..jpg?width=80" alt="Мартин Лютер Кинг" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Мартин Лютер Кинг</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 1964</span></td>
+            <td>«Тьма не может прогнать тьму: это может сделать только свет.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">10</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson_Mandela-2008_(edit).jpg?width=80" alt="Нельсон Мандела" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Нельсон Мандела</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 1993</span></td>
+            <td>«Образование — самое мощное оружие, с помощью которого можно изменить мир.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">11</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mother_Teresa_1.jpg?width=80" alt="Мать Тереза" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Мать Тереза</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 1979</span></td>
+            <td>«Мы не можем делать великие дела. Мы можем делать только маленькие дела с великой любовью.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">12</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ivan_Pavlov_NLM3.jpg?width=80" alt="Иван Павлов" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Иван Павлов</b><br><span style="font-size: 85%; color: #54595d;">Физиология и медицина, 1904</span></td>
+            <td>«Изучайте азы науки, прежде чем пытаться взойти на ее вершины.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">13</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ilya_Mechnikov.jpg?width=80" alt="Илья Мечников" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Илья Мечников</b><br><span style="font-size: 85%; color: #54595d;">Физиология и медицина, 1908</span></td>
+            <td>«Пессимизм есть болезнь, которую можно и должно лечить.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">14</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Alexander_Fleming.jpg?width=80" alt="Александр Флеминг" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Александр Флеминг</b><br><span style="font-size: 85%; color: #54595d;">Физиология и медицина, 1945</span></td>
+            <td>«Природа создает пенициллин, я только нашел его.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">15</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/James_D_Watson_Genome_Project.jpg?width=80" alt="Джеймс Уотсон" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Джеймс Уотсон</b><br><span style="font-size: 85%; color: #54595d;">Физиология и медицина, 1962</span></td>
+            <td>«Раньше мы думали, что наша судьба написана на звездах. Теперь мы знаем, что она записана в наших генах.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">16</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gabriel_Garcia_Marquez.jpg?width=80" alt="Габриэль Гарсиа Маркес" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Габриэль Гарсиа Маркес</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1982</span></td>
+            <td>«Жизнь — это не то, что человек прожил, а то, что он помнит.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">17</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ernest_Hemingway_1923_passport_photo.jpg?width=80" alt="Эрнест Хемингуэй" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Эрнест Хемингуэй</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1954</span></td>
+            <td>«Мир — хорошее место, и за него стоит драться.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">18</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/George_Bernard_Shaw_1914_colorized.jpg?width=80" alt="Бернард Шоу" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Бернард Шоу</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1925</span></td>
+            <td>«Секрет успеха в том, чтобы оскорбить как можно больше людей.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">19</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Winston_Churchill_-_19086236948.jpg?width=80" alt="Уинстон Черчилль" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Уинстон Черчилль</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1953</span></td>
+            <td>«Успех — это способность шагать от одной неудачи к другой, не теряя энтузиазма.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">20</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Camus,_gagnant_de_prix_Nobel,_portrait_en_buste,_posé_au_bureau,_faisant_face_à_gauche,_directeur_de_Combat.jpg?width=80" alt="Альбер Камю" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Альбер Камю</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1957</span></td>
+            <td>«Свобода — это не что иное, как шанс стать лучше.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">21</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Paul_Sartre_1967.jpg?width=80" alt="Жан-Поль Сартр" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Жан-Поль Сартр</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1964</span></td>
+            <td>«Человек обречен быть свободным.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">22</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Boris_Pasternak_1958.jpg?width=80" alt="Борис Пастернак" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Борис Пастернак</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1958</span></td>
+            <td>«Цель творчества — самоотдача, а не шумиха, не успех.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">23</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ivan_Bunin_1933.jpg?width=80" alt="Иван Бунин" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Иван Бунин</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1933</span></td>
+            <td>«Больше всего мы думаем о том, чего у нас нет.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">24</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Brodsky_in_Ann_Arbor.jpg?width=80" alt="Иосиф Бродский" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Иосиф Бродский</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1987</span></td>
+            <td>«Мир, вероятно, спасти уже не удастся, но отдельного человека всегда можно.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">25</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Aleksandr_Solzhenitsyn_1974_crop.jpg?width=80" alt="Александр Солженицын" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Александр Солженицын</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1970</span></td>
+            <td>«Одно слово правды весь мир перетянет.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">26</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Mann_1937.jpg?width=80" alt="Томас Манн" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Томас Манн</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1929</span></td>
+            <td>«Писатель — это человек, которому писать труднее, чем остальным людям.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">27</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lev_Landau_2.jpg?width=80" alt="Лев Ландау" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Лев Ландау</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1962</span></td>
+            <td>«Главное — делайте всё с увлечением: это страшно украшает жизнь.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">28</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pyotr_Kapitsa.jpg?width=80" alt="Петр Капица" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Петр Капица</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1978</span></td>
+            <td>«Руководить — это значит не мешать хорошим людям работать.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">29</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Andrei_Sakharov_1989.jpg?width=80" alt="Андрей Сахаров" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Андрей Сахаров</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 1975</span></td>
+            <td>«Прогресс неизбежен, его нельзя отменить.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">30</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/John_Forbes_Nash,_Jr._by_Peter_Badge.jpg?width=80" alt="Джон Нэш" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Джон Нэш</b><br><span style="font-size: 85%; color: #54595d;">Экономика, 1994</span></td>
+            <td>«Именно в уравнениях любви можно найти логические основания.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">31</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_of_Milton_Friedman.jpg?width=80" alt="Милтон Фридман" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Милтон Фридман</b><br><span style="font-size: 85%; color: #54595d;">Экономика, 1976</span></td>
+            <td>«Ничто так не постоянно, как временная государственная программа.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">32</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Paul_Krugman_2008.jpg?width=80" alt="Пол Кругман" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Пол Кругман</b><br><span style="font-size: 85%; color: #54595d;">Экономика, 2008</span></td>
+            <td>«Продуктивность — это ещё не всё, но в долгосрочной перспективе это почти всё.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">33</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Elie_Wiesel_2012.jpg?width=80" alt="Эли Визель" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Эли Визель</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 1986</span></td>
+            <td>«Противоположность любви — не ненависть, а безразличие.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">34</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Malala_Yousafzai_2015.jpg?width=80" alt="Малала Юсуфзай" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Малала Юсуфзай</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 2014</span></td>
+            <td>«Один ребенок, один учитель, одна книга и одна ручка могут изменить мир.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">35</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bob_Dylan_-_Azkena_Rock_Festival_2010_2.jpg?width=80" alt="Боб Дилан" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Боб Дилан</b><br><span style="font-size: 85%; color: #54595d;">Литература, 2016</span></td>
+            <td>«Тот, кто не занят рождением, занят умиранием.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">36</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hermann_Hesse_1927.jpg?width=80" alt="Герман Гессе" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Герман Гессе</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1946</span></td>
+            <td>«Истина переживается, а не преподается.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">37</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rabindranath_Tagore_unknown_photographer_1925.jpg?width=80" alt="Рабиндранат Тагор" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Рабиндранат Тагор</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1913</span></td>
+            <td>«Вы не можете пересечь море, просто стоя и глядя на воду.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">38</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/President_Woodrow_Wilson_portrait_December_2_1912.jpg?width=80" alt="Вудро Вильсон" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Вудро Вильсон</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 1919</span></td>
+            <td>«Свобода никогда не исходит от правительства. Свобода всегда исходит от его подданных.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">39</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/President_Theodore_Roosevelt,_1904.jpg?width=80" alt="Теодор Рузвельт" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Теодор Рузвельт</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 1906</span></td>
+            <td>«Делай, что можешь, с тем, что имеешь, там, где ты есть.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">40</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mikhail_Gorbachev_1987.jpg?width=80" alt="Михаил Горбачёв" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Михаил Горбачёв</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 1990</span></td>
+            <td>«Если не я, то кто? Если не сейчас, то когда?»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">41</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Robert_Koch_1900.jpg?width=80" alt="Роберт Кох" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Роберт Кох</b><br><span style="font-size: 85%; color: #54595d;">Физиология и медицина, 1905</span></td>
+            <td>«Когда-нибудь человечеству придется бороться с шумом столь же безжалостно, как с холерой.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">42</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Hunt_Morgan.jpg?width=80" alt="Томас Морган" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Томас Морган</b><br><span style="font-size: 85%; color: #54595d;">Физиология и медицина, 1933</span></td>
+            <td>«Наука не может дать ответы на все вопросы, но она дает метод их поиска.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; background-color: #fff9e6;">43</td>
+            <td style="text-align: center; background-color: #fff9e6;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wikipe-tan_face.svg?width=80" alt="Ботик-тян" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td style="background-color: #fff9e6;"><b><a href="#">Ботик-тян</a></b><br><span style="font-size: 85%; color: #54595d;">Без категории</span></td>
+            <td style="background-color: #fff9e6;">«Скажите "пожалуйста"!~»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">44</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ivan_Bunin.jpg?width=80" alt="Иван Бунин" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Иван Бунин</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1933</span></td>
+            <td>«Человека делают счастливым три вещи: любовь, интересная работа и возможность путешествовать.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">45</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wilhelm_Conrad_Röntgen.jpg?width=80" alt="Вильгельм Рентген" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Вильгельм Рентген</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1901</span></td>
+            <td>«Я не думал, я экспериментировал.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">46</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/James_Chadwick.jpg?width=80" alt="Джеймс Чедвик" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Джеймс Чедвик</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1935</span></td>
+            <td>«Я понял, что нейтрон существует, задолго до того, как открыл его.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">47</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Enrico_Fermi_1940s.jpg?width=80" alt="Энрико Ферми" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Энрико Ферми</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1938</span></td>
+            <td>«Если бы я мог запомнить названия всех элементарных частиц, я бы стал ботаником.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">48</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chen_Ning_Yang_1957.jpg?width=80" alt="Чэнь Нин Янг" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Чэнь Нин Янг</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1957</span></td>
+            <td>«В физике, когда вы находите новую симметрию, вы находите новый закон.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">49</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Linda_B._Buck_2015.jpg?width=80" alt="Линда Бак" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Линда Бак</b><br><span style="font-size: 85%; color: #54595d;">Физиология и медицина, 2004</span></td>
+            <td>«Обоняние — самое древнее чувство, и оно напрямую связано с памятью.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">50</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shinya_Yamanaka_2012.jpg?width=80" alt="Шинья Яманака" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Шинья Яманака</b><br><span style="font-size: 85%; color: #54595d;">Физиология и медицина, 2012</span></td>
+            <td>«Мой секрет — это усердная работа и немного удачи.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">51</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dmitry_Muratov_2021.jpg?width=80" alt="Дмитрий Муратов" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Дмитрий Муратов</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 2021</span></td>
+            <td>«Журналистика — это антидот от тирании.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">52</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wisława_Szymborska_1996.jpg?width=80" alt="Вислава Шимборская" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Вислава Шимборская</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1996</span></td>
+            <td>«Чтение книг — это самая красивая забава, которую человечество придумало.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">53</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Toni_Morrison_2008.jpg?width=80" alt="Тони Моррисон" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Тони Моррисон</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1993</span></td>
+            <td>«Если есть книга, которую ты хочешь прочитать, но она еще не написана, то ты должен ее написать.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">54</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/William_Faulkner_1954.jpg?width=80" alt="Уильям Фолкнер" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Уильям Фолкнер</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1949</span></td>
+            <td>«Никогда не бойтесь говорить правду.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">55</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/John_Steinbeck_1962.jpg?width=80" alt="Джон Стейнбек" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Джон Стейнбек</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1962</span></td>
+            <td>«По-настоящему живым человека делает только любовь.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">56</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pablo_Neruda_1963.jpg?width=80" alt="Пабло Неруда" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Пабло Неруда</b><br><span style="font-size: 85%; color: #54595d;">Литература, 1971</span></td>
+            <td>«Вы можете срезать все цветы, но не можете остановить весну.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">57</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Orhan_Pamuk_2009.jpg?width=80" alt="Орхан Памук" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Орхан Памук</b><br><span style="font-size: 85%; color: #54595d;">Литература, 2006</span></td>
+            <td>«Счастье — это просто быть рядом с тем, кого любишь.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">58</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dalai_Lama_1430.jpg?width=80" alt="Далай-лама XIV" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Далай-лама XIV</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 1989</span></td>
+            <td>«Сон — это лучшая медитация.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">59</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kofi_Annan.jpg?width=80" alt="Кофи Аннан" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Кофи Аннан</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 2001</span></td>
+            <td>«Знание — сила. Информация — освобождение.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">60</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Muhammad_Yunus_2012.jpg?width=80" alt="Мухаммад Юнус" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Мухаммад Юнус</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 2006</span></td>
+            <td>«Бедность создается системой, а не бедными людьми.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">61</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Schweitzer_1952.jpg?width=80" alt="Альберт Швейцер" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Альберт Швейцер</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 1952</span></td>
+            <td>«Успех не является ключом к счастью. Счастье — это ключ к успеху.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">62</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Barack_Obama_portrait_crop.jpg?width=80" alt="Барак Обама" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Барак Обама</b><br><span style="font-size: 85%; color: #54595d;">Премия мира, 2009</span></td>
+            <td>«Перемены не наступят, если мы будем ждать другого человека или другого времени.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">63</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Roger_Penrose_at_Festival_della_Scienza_Oct_29_2011.jpg?width=80" alt="Роджер Пенроуз" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Роджер Пенроуз</b><br><span style="font-size: 85%; color: #54595d;">Физика, 2020</span></td>
+            <td>«Сознание не может быть вычислено.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">64</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Higgs_2013.jpg?width=80" alt="Питер Хиггс" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Питер Хиггс</b><br><span style="font-size: 85%; color: #54595d;">Физика, 2013</span></td>
+            <td>«Я никогда не думал, что это произойдет при моей жизни.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">65</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Maria_Goeppert-Mayer.jpg?width=80" alt="Мария Гёпперт-Майер" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Мария Гёпперт-Майер</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1963</span></td>
+            <td>«Наука требует терпения.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">66</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Abdus_Salam_1979.jpg?width=80" alt="Абдус Салам" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Абдус Салам</b><br><span style="font-size: 85%; color: #54595d;">Физика, 1979</span></td>
+            <td>«Научная мысль является общим наследием человечества.»</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">67</td>
+            <td style="text-align: center;"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ilya_Prigogine.jpg?width=80" alt="Илья Пригожин" width="60" style="max-height: 80px; object-fit: cover;"></td>
+            <td><b>Илья Пригожин</b><br><span style="font-size: 85%; color: #54595d;">Химия, 1977</span></td>
+            <td>«Будущее не предопределено, оно открыто.»</td>
+        </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
